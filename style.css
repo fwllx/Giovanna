@@ -1,0 +1,72 @@
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top,#0b1021 0%,#050710 100%);
+  color:white;
+  height:100vh;
+  overflow:hidden;
+}
+.sky{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;left:0;
+  overflow:hidden;
+  z-index:0;
+}
+.star{
+  position:absolute;
+  background:white;
+  border-radius:50%;
+  opacity:0.8;
+  animation:twinkle 2s infinite ease-in-out;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0.3;}
+  50%{opacity:1;}
+}
+.moon{
+  position:absolute;
+  top:10%;
+  right:10%;
+  background:radial-gradient(circle at 30% 30%,#fff,#ddd 40%,#bbb 80%);
+  border-radius:50%;
+  width:120px;
+  height:120px;
+  box-shadow:0 0 30px #fff6;
+  text-align:center;
+  padding:20px;
+  z-index:1;
+  color:#111;
+  font-size:12px;
+}
+main.content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  margin-top:250px;
+}
+h1{font-size:26px;margin-bottom:10px;}
+.lead{opacity:0.9;}
+.hearts{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+}
+.heart{
+  cursor:pointer;
+  font-size:28px;
+  transition:transform 0.2s;
+}
+.heart:hover{transform:scale(1.3);}
+footer{
+  position:fixed;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+  font-size:14px;
+  opacity:0.8;
+  z-index:3;
+}
